@@ -1,0 +1,23 @@
+# Reference: https://build-cpp.github.io/cmkr/cmake-toml
+[project]
+name = "PinHead"
+cmake-after = """
+# Add CPM and pintool
+include( cmake/cpm.cmake )
+include( cmake/IntelPIN.cmake )
+
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
+"""
+
+# Intel PIN
+[template.pintool]
+type = "custom"
+add-function = "add_pintool"
+pass-sources = true
+
+# PINHEAD instrumentation
+[target.example]
+type = "pintool"
+sources = [
+	"src/*.cpp"
+]

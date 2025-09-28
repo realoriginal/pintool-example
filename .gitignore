@@ -1,0 +1,9 @@
+# cmkr
+build*/
+cmake-build*/
+CMakerLists.txt
+CMakeLists.txt.user
+
+# visual studio
+.vs*/
+out*/
