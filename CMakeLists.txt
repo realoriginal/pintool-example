@@ -26,11 +26,8 @@ endif()
 
 project(PinHead)
 
-# Add CPM and pintool
-include( cmake/cpm.cmake )
-include( cmake/IntelPIN.cmake )
-
-set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
+include("cmake/cpm.cmake")
+include("cmake/IntelPIN.cmake")
 
 # Target: example
 set(example_SOURCES
